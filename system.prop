@@ -73,3 +73,14 @@ ro.vendor.qti.va_aosp.support=1
 
 # Zygote
 persist.device_config.runtime_native.usap_pool_enabled=true
+
+# Remove multi-users feature
+fw.max_users=1
+
+# Hide Users from Settings
+fw.show_multiuserui=0
+
+# LowRam
+android.hardware.ram.low=true
+ro.config.ksm=true
+ro.config.zram=false
