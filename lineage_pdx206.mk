@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2018-2020 The LineageOS Project
+# Copyright (C) 2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,15 +21,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device.mk
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
-# Inherit some common Lineage stuff
+# Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 IS_PHONE := true
 
-PRODUCT_BRAND := Sony
+PRODUCT_NAME := lineage_pdx206
 PRODUCT_DEVICE := pdx206
 PRODUCT_MANUFACTURER := Sony
-PRODUCT_NAME := lineage_pdx206
+PRODUCT_BRAND := Sony
 PRODUCT_MODEL := Xperia 5 II
 
 PRODUCT_GMS_CLIENTID_BASE := android-sonymobile
@@ -40,5 +40,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=XQ-AS72 \
     TARGET_PRODUCT=XQ-AS72 \
     PRIVATE_BUILD_DESC="Sony/pdx206/pdx2062 10 QKQ1.200108.002 1:user release-keys"
+#    PRIVATE_BUILD_DESC="XQ-AS72-user 12 58.2.A.10.126 058002A010012603718185433 release-keys"
 
 BUILD_FINGERPRINT := Sony/pdx206/pdx206:10/QKQ1.200108.002/1:user/release-keys
+#BUILD_FINGERPRINT := Sony/XQ-AS72/XQ-AS72:12/58.2.A.10.126/058002A010012603718185433:user/release-keys

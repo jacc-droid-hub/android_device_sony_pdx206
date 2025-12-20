@@ -22,40 +22,35 @@
 # definition file).
 #
 
-# Inherit from common
+# Inherit from sony edo-common
 $(call inherit-product, device/sony/edo-common/edo.mk)
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2520
 TARGET_SCREEN_WIDTH := 1080
 
-# Display
-TARGET_SCREEN_DENSITY := 420
-
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
-
-# Using Sony Vendor Camera
-PRODUCT_PACKAGES += \
-    SemcCameraUI
 
 # Device specific overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
 
-# Remove unwanted packages
-PRODUCT_PACKAGES += \
-    RemovePackages
+# HDR
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/libhdr_somc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/libhdr_somc.xml
 
-#HIDL
+# HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.base@1.0_system \
     android.hidl.manager@1.0
 
-# NFC
+# Input
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf \
-    $(LOCAL_PATH)/nfc/libnfc-nxp_RF.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp_RF.conf
+    $(LOCAL_PATH)/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl
+
+# Inherit from vendor blobs
+$(call inherit-product, vendor/sony/pdx206/pdx206-vendor.mk)

@@ -15,14 +15,17 @@
 #
 
 # Inherit from sony edo-common
--include device/sony/edo-common/PlatformConfig.mk
+-include device/sony/edo-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/sony/pdx206
 
+# Display
+TARGET_SCREEN_DENSITY := 420
+
+BOARD_KERNEL_CMDLINE += buildproduct=pdx206
+
 TARGET_KERNEL_SOURCE := kernel/sony/sm8250
-# TARGET_COMPILE_WITH_MSM_KERNEL := true
-TARGET_KERNEL_CONFIG := kona-bbn_defconfig
-TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_CONFIG := pdx206_defconfig
 
 BOARD_MKBOOTIMG_ARGS += --base $(BOARD_KERNEL_BASE)
 BOARD_MKBOOTIMG_ARGS += --pagesize $(BOARD_KERNEL_PAGESIZE)
@@ -33,11 +36,8 @@ BOARD_MKBOOTIMG_ARGS += --second_offset $(BOARD_KERNEL_SECOND_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --dtb_offset $(BOARD_DTB_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
-# Properties
-TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
+# Props
 TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
-TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # Inherit from the proprietary version
 -include vendor/sony/pdx206/BoardConfigVendor.mk
