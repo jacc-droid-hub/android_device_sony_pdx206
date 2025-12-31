@@ -1252,6 +1252,7 @@ vendor/lib/libsdmutils.so
 vendor/lib/libqdutils.so
 
 # Display (SDM)
+vendor/lib64/libdisplayconfig.so
 vendor/lib64/libdisplayqos.so
 #vendor/lib64/libdisplayskuutils.so
 vendor/lib64/libqseed3.so
@@ -1262,6 +1263,7 @@ vendor/lib64/libsdm-diag.so
 vendor/lib64/libsdm-disp-vndapis.so
 vendor/lib64/libsdmextension.so
 vendor/lib64/libtinyxml2_1.so
+vendor/lib/libdisplayconfig.so
 vendor/lib/libdisplayqos.so
 vendor/lib/libqseed3.so
 vendor/lib/libsdedrm.so
