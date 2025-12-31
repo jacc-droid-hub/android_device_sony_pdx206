@@ -67,12 +67,6 @@ vendor/lib/rfsa/adsp/libscveT2T_skel.so
 vendor/lib/rfsa/adsp/libhexagon_nn_skel.so
 vendor/lib/rfsa/adsp/libdsp_streamer_binning.so
 
-# ANT+ - from instantnoodlep idk what version
-system/lib/libantradio.so|8cac14e0ae2e6bc6d41e09bd231d61b8ac86e185
-system/lib64/libantradio.so|d7ba7651e2e5dcf2a88bcbb16cc36f1579669e3c
-vendor/lib/com.qualcomm.qti.ant@1.0.so
-vendor/lib64/com.qualcomm.qti.ant@1.0.so
-
 # Audio Firmware
 vendor/lib64/libacdb-fts.so
 vendor/lib64/libadiertac.so
@@ -2025,6 +2019,9 @@ vendor/lib64/com.qualcomm.qti.ant@1.0.so
 vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so
 vendor/lib/com.qualcomm.qti.ant@1.0.so
 vendor/lib/hw/com.qualcomm.qti.ant@1.0-impl.so
+# from instantnoodlep idk what version
+system/lib/libantradio.so|8cac14e0ae2e6bc6d41e09bd231d61b8ac86e185
+system/lib64/libantradio.so|d7ba7651e2e5dcf2a88bcbb16cc36f1579669e3c
 
 # Qteeconnector
 vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service
@@ -2567,6 +2564,7 @@ system/lib64/libwfduibcsrcinterface.so
 vendor/bin/wifidisplayhalservice
 vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc
 vendor/etc/wfdconfig.xml
+vendor/lib/libFileMux_proprietary.so
 vendor/lib/libmmrtpdecoder_proprietary.so
 vendor/lib/libmmrtpencoder_proprietary.so
 vendor/lib/libwfdaac_vendor.so
@@ -2590,6 +2588,7 @@ vendor/lib/libwfduibcsrcinterface_proprietary.so
 vendor/lib/libwfduibcsrc_proprietary.so
 vendor/lib/vendor.qti.hardware.wifidisplaysession@1.0.so
 vendor/lib/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so
+vendor/lib64/libFileMux_proprietary.so
 vendor/lib64/libwfdhdcpcp.so
 vendor/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so
 
