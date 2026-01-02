@@ -8,7 +8,7 @@
 
 set -e
 
-export DEVICE_COMMON=pdx206
+export DEVICE=pdx206
 export DEVICE_COMMON=edo-common
 export VENDOR=sony
 
