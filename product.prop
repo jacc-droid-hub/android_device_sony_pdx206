@@ -1,0 +1,8 @@
+# Smooth display
+# Android 10 SurfaceFlinger only switches between the panel's 60/120 Hz modes
+# (and only shows the 1034 refresh rate overlay) when this is set.
+ro.surface_flinger.refresh_rate_switching=true
+ro.surface_flinger.set_idle_timer_ms=4000
+ro.surface_flinger.set_touch_timer_ms=4000
+ro.surface_flinger.set_display_power_timer_ms=1000
+ro.surface_flinger.use_smart_90_for_video=true

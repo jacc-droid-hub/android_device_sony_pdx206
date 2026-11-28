@@ -1,0 +1,6 @@
+[
+  {
+    "repository": "android_device_sony_edo-common",
+    "target_path": "device/sony/edo-common"
+  }
+]
